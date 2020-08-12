@@ -3,7 +3,7 @@ function searchItem(search) {
 
     let proxy = 'https://cors-anywhere.herokuapp.com/';
     let appID = 'KennethM-Scenti-PRD-3c8eaa0db-1c03fd2e';
-    let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=5`;
+    let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=20`;
 
     let result;
     fetch(url)
@@ -17,7 +17,7 @@ function searchItem(search) {
 
         })
 }
-searchItem("cologne");
+searchItem("mens cologne");
 
 let container = document.getElementById("mens-container");
 
@@ -27,21 +27,26 @@ function displayData(json) {
     for (i = 0; i < json.Product.length; i++) {
         console.log(json.Product[i].Title);
 
-        json.Product[i].DisplayStockPhotos = true
         let item_name = json.Product[i].Title;
         let item_image = json.Product[i].StockPhotoURL;
 
         let div = document.createElement("div");
 
-        let img = document.createElement("img");
-        img.src = item_image;
-        div.appendChild(img);
-        
-        let p = document.createElement("p");
-        p.innerText = item_name;
-        div.appendChild(p);
-        
-        container.appendChild(div);
+        if (json.Product[8].DisplayStockPhotos == true){
+            
+        }
+
+        if(json.Product[i].DisplayStockPhotos == true){
+            let img = document.createElement("img");
+            img.src = item_image;
+            div.appendChild(img);
+
+            let p = document.createElement("p");
+            p.innerText = item_name;
+            div.appendChild(p);
+            
+            container.appendChild(div);
+        }
     }
 
 
