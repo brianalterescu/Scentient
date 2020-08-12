@@ -3,7 +3,7 @@ function searchItem(search) {
 
     let proxy = 'https://cors-anywhere.herokuapp.com/';
     let appID = 'KennethM-Scenti-PRD-3c8eaa0db-1c03fd2e';
-    let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=20`;
+    let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=45`;
 
     let result;
     fetch(url)
@@ -32,10 +32,19 @@ function displayData(json) {
 
         let div = document.createElement("div");
 
-        if (json.Product[8].DisplayStockPhotos == true){
-            
+        if (i == 7){
+            continue;
         }
 
+        if(i == 8){
+            continue;
+        }
+        if(i == 20){
+            continue;
+        }
+        if(i == 39){
+            continue;
+        }
         if(json.Product[i].DisplayStockPhotos == true){
             let img = document.createElement("img");
             img.src = item_image;
@@ -48,32 +57,4 @@ function displayData(json) {
             container.appendChild(div);
         }
     }
-
-
-
-
-
-        //PRODUCT 1
-        // let item_name1 = json.Product[0].Title;
-        // let item_image1 = json.Product[0].StockPhotoURL;
-
-        // let img = document.createElement("img");
-        // img.src = item_image1;
-        // document.body.appendChild(img);
-
-        // let div = document.createElement("div")
-        // div.innerText = item_name1;
-        // document.body.appendChild(div);
-        // //PRODUCT 1
-
-        // //PRODUCT 2
-        // let item_name2 = json.
-        // let item_image2 = json.Product[1].StockPhotoURL;
-    
-        // let img1 = document.createElement("img")
-
-        // json.Product[4].DisplayStockPhotos = true
-    // }
-
 }
-//rearrange the img and div so the img can come first and then the name of the product can appear//

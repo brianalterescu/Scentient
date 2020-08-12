@@ -12,18 +12,18 @@ h1 {
     margin-top: 10px;
     
 }
+a {
+    text-decoration: none;
+ }
 h5 {
     color: #FA0B53;
     font-family: 'Comfortaa', cursive;
     text-align: center;
     font-size: 25;
     margin: auto;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     
 }
-a {
-    text-decoration: none;
- }
 #logoIcon {
     width: 120px;
     float: center;
@@ -33,4 +33,33 @@ a {
     right: 42.42%;
     top: 3%;
     
+}
+#unisex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#unisex-container div {
+    width: 200px;
+    padding: 10px;
+}
+
+#unisex-container img {
+    width: 200px;
+    height: 220px;
+    border-radius: 15px;
+    border-color:#FA0B53;
+    transition: opacity .5s;
+    border-style: solid;
+}
+
+#unisex-container img:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+p{
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    font-size: 25;
 }

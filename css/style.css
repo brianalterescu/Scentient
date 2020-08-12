@@ -1,4 +1,4 @@
-@media (max-width: 400px) {
+@media (max-width: 700px) {
     #logoIcon {
         position: absolute;
         float: left;
@@ -6,11 +6,40 @@
         top: 0%;
         bottom: 26.74%;
     }
-
+    body{
+        position: fixed;
+    }
+    h1 {
+        color: #FA0B53;
+        font-family: 'Pacifico', cursive;
+        
+        font-size: 50px;
+        margin: auto;
+        margin-top: 10px;
+        padding-right: 900px;
+    }
+    h5 {
+        padding-right: 900px;
+    }
+    #logoIcon{
+        align-items: left;
+        float: left;
+    }
     .homeImages {
         display: flex;
+        margin-left: 10px;
+        align-items: left;
+        float: left;
+        width: 50px;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+    }
+    .images {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0%;
+        padding-top: 50px;
+        width: 100px;
     }
 }
 
