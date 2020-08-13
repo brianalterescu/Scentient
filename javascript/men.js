@@ -1,23 +1,25 @@
-function searchItem(search) {
-    search = encodeURIComponent(search);
+// function searchItem(search) {
+//     search = encodeURIComponent(search);
 
-    let proxy = 'https://cors-anywhere.herokuapp.com/';
-    let appID = 'KennethM-Scenti-PRD-3c8eaa0db-1c03fd2e';
-    let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=45`;
+//     let proxy = 'https://cors-anywhere.herokuapp.com/';
+//     let appID = 'KennethM-Scenti-PRD-3c8eaa0db-1c03fd2e';
+//     let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=45`;
 
-    let result;
-    fetch(url)
-        .then(function (response) {
-            return response.json();
+//     `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=KennethM-Scenti-PRD-3c8eaa0db-1c03fd2e&siteid=0&QueryKeywords=mens%20cologne&version=1157&MaxEntries=45`
 
-        })
-        .then(function (json) {
-            console.log(json);
-            displayData(json);
+//     let result;
+//     fetch(url)
+//         .then(function (response) {
+//             return response.json();
 
-        })
-}
-searchItem("mens cologne");
+//         })
+//         .then(function (json) {
+//             console.log(json);
+//             displayData(json);
+
+//         })
+// }
+// searchItem("mens cologne");
 
 let container = document.getElementById("mens-container");
 
@@ -32,29 +34,27 @@ function displayData(json) {
 
         let div = document.createElement("div");
 
-        if (i == 7){
+        if (json.Product[i].Title == "Liz Claiborne Curve Crush CUCMCS42X Men's Eau De Cologne Spray Tester - 4.2 oz"){
+            continue;
+        }
+        if (json.Product[i].Title == "Halston Z-14 Men's Eau de Cologne 8oz."){
+            continue;
+        }
+        if (json.Product[i].Title == "Tommy Bahama Island Life 3.4oz Men's Eau de Cologne"){
             continue;
         }
 
-        if(i == 8){
-            continue;
-        }
-        if(i == 20){
-            continue;
-        }
-        if(i == 39){
-            continue;
-        }
         if(json.Product[i].DisplayStockPhotos == true){
+            
+            let link = json.Product[i].DetailsURL;
+            
             let img = document.createElement("img");
             img.src = item_image;
             div.appendChild(img);
 
-            let link = json.Product[i].DetailsURL;
-
             let p = document.createElement("a");
             p.setAttribute('href', link);
-            p.setAttribute('target', "_blank")
+            p.setAttribute('target', "_blank");
             p.innerText = item_name;
             div.appendChild(p);
             

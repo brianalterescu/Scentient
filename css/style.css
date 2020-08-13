@@ -1,50 +1,4 @@
-@media (max-width: 700px) {
-    #logoIcon {
-        position: absolute;
-        float: left;
-        right: 42.42%;
-        top: 0%;
-        bottom: 26.74%;
-    }
-    body{
-        position: fixed;
-    }
-    h1 {
-        color: #FA0B53;
-        font-family: 'Pacifico', cursive;
-        
-        font-size: 50px;
-        margin: auto;
-        margin-top: 10px;
-        padding-right: 900px;
-    }
-    h5 {
-        padding-right: 900px;
-    }
-    #logoIcon{
-        align-items: left;
-        float: left;
-    }
-    .homeImages {
-        display: flex;
-        margin-left: 10px;
-        align-items: left;
-        float: left;
-        width: 50px;
-        justify-content: center;
-        flex-wrap: nowrap;
-    }
-    .images {
-        display: flex;
-        
-        padding-left: 0px;
-        padding-top: 50px;
-        margin: auto;
-    }
-    .banner{
-        padding-top: 1200px;
-    }
-}
+  
 
 a {
     text-decoration: none;
@@ -112,4 +66,65 @@ h4 {
     margin: center;
     text-align: center;
     white-space: nowrap;
+}
+.footer {
+    position: absolute;
+    position: bottom;
+    width: 100%;
+    background-color: red;
+    color: black;
+    text-align: center;
+}
+
+ @media (max-width: 700px) {
+    #logoIcon {
+        position: absolute;
+        float: left;
+        right: 42.42%;
+        top: 0%;
+        bottom: 26.74%;
+    }
+    body{
+        position: fixed;
+    }
+    h1 {
+        color: #FA0B53;
+        font-family: 'Pacifico', cursive;
+        text-align: center;
+        font-size: 50px;
+        margin: auto;
+        margin-top: 10px;
+        padding-left: 65px;
+        padding-right: 600px;
+    }
+    h5 {
+        padding-right: 500px;
+    }
+    #logoIcon{
+        
+       
+        padding-right: 700px;
+    }
+    .homeImages {
+        
+        flex-direction: row;
+        margin-left: 100px;
+        align-items: left;
+        float: left;
+        height: 220px;
+        width: 150px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .images {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        padding-top: 50px;
+        margin: 0;
+        justify-content: center;
+    }
+    .banner{
+        padding-top: 1200px;
+    }
 }
