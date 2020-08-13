@@ -1,4 +1,6 @@
-
+body{
+    background-color: #FFFFFF;
+}
 #img{
     width: 50px;
     height: 50px;
@@ -14,6 +16,10 @@ h1 {
 }
 a {
     text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    color: #FA0B53;
+    font-size: 14px;
  }
 h5 {
     color: #FA0B53;

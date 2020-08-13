@@ -3,7 +3,7 @@ function searchItem(search) {
 
     let proxy = 'https://cors-anywhere.herokuapp.com/';
     let appID = 'KennethM-Scenti-PRD-3c8eaa0db-1c03fd2e';
-    let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=20`;
+    let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=30`;
 
     let result;
     fetch(url)
@@ -38,7 +38,11 @@ function displayData(json) {
             img.src = item_image;
             div.appendChild(img);
 
+            let link = json.Product[i].DetailsURL;
+
             let p = document.createElement("p");
+            p.setAttribute('href', link);
+            p.setAttribute('target', "_blank");
             p.innerText = item_name;
             div.appendChild(p);
             

@@ -36,10 +36,13 @@
     }
     .images {
         display: flex;
-        flex-direction: column;
-        padding-left: 0%;
+        
+        padding-left: 0px;
         padding-top: 50px;
-        width: 100px;
+        margin: auto;
+    }
+    .banner{
+        padding-top: 1200px;
     }
 }
 

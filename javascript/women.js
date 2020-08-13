@@ -3,7 +3,7 @@ function searchItem(search) {
 
     let proxy = 'https://cors-anywhere.herokuapp.com/';
     let appID = 'KennethM-Scenti-PRD-3c8eaa0db-1c03fd2e';
-    let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=20`;
+    let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=45`;
 
     let result;
     fetch(url)
@@ -31,23 +31,33 @@ function displayData(json) {
 
         let div = document.createElement("div");
 
-        if(i == 6){
+        if(i == 5){
             continue;
         }   
 
         if(i == 1){
             continue;
         }
-
+        if(i == 30){
+            continue;
+        }
+        if (i == 39){
+            continue;
+        }
         if(json.Product[i].DisplayStockPhotos == true){
             let img = document.createElement("img");
             img.src = item_image;
             div.appendChild(img);
 
-            let p = document.createElement("p");
+            let link = json.Product[i].DetailsURL;
+            
+            let p = document.createElement("a");
+            p.setAttribute('href', link);
+            p.setAttribute('target', "_blank")
             p.innerText = item_name;
             div.appendChild(p);
             
+
             container.appendChild(div);
         }
     }

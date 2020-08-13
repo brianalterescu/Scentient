@@ -23,6 +23,9 @@ h5 {
 }
 a {
     text-decoration: none;
+    color:#FA0B53;
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
  }
 #logoIcon {
     width: 120px;

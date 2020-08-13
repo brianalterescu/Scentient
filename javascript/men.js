@@ -50,7 +50,11 @@ function displayData(json) {
             img.src = item_image;
             div.appendChild(img);
 
-            let p = document.createElement("p");
+            let link = json.Product[i].DetailsURL;
+
+            let p = document.createElement("a");
+            p.setAttribute('href', link);
+            p.setAttribute('target', "_blank")
             p.innerText = item_name;
             div.appendChild(p);
             
