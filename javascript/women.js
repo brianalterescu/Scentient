@@ -1,25 +1,25 @@
-// function searchItem(search) {
-//     search = encodeURIComponent(search);
+function searchItem(search) {
+    search = encodeURIComponent(search);
 
-//     let proxy = 'https://cors-anywhere.herokuapp.com/';
-//     let appID = 'KennethM-Scenti-PRD-3c8eaa0db-1c03fd2e';
-//     let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=45`;
+    let proxy = 'https://cors-anywhere.herokuapp.com/';
+    let appID = 'KennethM-Scenti-PRD-3c8eaa0db-1c03fd2e';
+    let url = proxy + `https://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=${appID}&siteid=0&QueryKeywords=${search}&version=1157&MaxEntries=45`;
 
-//     let result;
-//     fetch(url)
-//         .then(function (response) {
-//             return response.json();
+    let result;
+    fetch(url)
+        .then(function (response) {
+            return response.json();
 
-//         })
-//         .then(function (json) {
-//             console.log(json);
-//             displayData(json);
+        })
+        .then(function (json) {
+            console.log(json);
+            displayData(json);
 
-//         })
-// }
-// searchItem("womens perfume");
+        })
+}
+searchItem("womens perfume");
 
-// let container = document.getElementById("womens-container");
+let container = document.getElementById("womens-container");
 
 function displayData(json) {
 
