@@ -52,12 +52,27 @@ p {
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
     border-radius: 21px;
 }
-
+.brandImages {
+    width: 100px;
+    margin-left: 20px;
+    align-items: center;
+    
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    border-radius: 21px;
+}
 .images {
     display: flex;
     flex-direction: row;
     padding-left: 20%;
     padding-top: 50px;
+    width: 100px;
+}
+.brands {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20%;
+    padding-top: 10px;
     width: 100px;
 }
 
@@ -67,13 +82,15 @@ h4 {
     text-align: center;
     white-space: nowrap;
 }
-.footer {
-    position: absolute;
-    position: bottom;
-    width: 100%;
-    background-color: red;
-    color: black;
+
+h6{
+    color: #FA0B53;
+    font-family: 'Comfortaa', cursive;
     text-align: center;
+    font-size: 10px;
+    flex-wrap: wrap;
+    align-self: auto;
+    
 }
 
  @media (max-width: 700px) {
