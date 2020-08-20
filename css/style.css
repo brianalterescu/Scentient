@@ -110,36 +110,79 @@ h6{
         text-align: center;
         font-size: 50px;
         margin: auto;
-        margin-top: 10px;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: -15px;
         padding-left: 65px;
         padding-right: 600px;
     }
     h5 {
+        padding-top: 0px;
         padding-right: 500px;
+        padding-bottom: 0px;
+        margin-right: 30px;
+
+    }
+    h6{
+        float: left;
+        font-size: 8px;
+        margin-left: 10px;
     }
     #logoIcon{
-        
-       
-        padding-right: 700px;
+       padding-right: 500px; 
+       margin-left: -315px;
+       margin-top: 20px;
+       padding-right: 700px;
     }
     .homeImages {
+        height: 120px;
+        width: 75px;
         
-        flex-direction: row;
-        margin-left: 100px;
-        align-items: left;
-        float: left;
-        height: 220px;
-        width: 150px;
-        justify-content: center;
-        flex-wrap: wrap;
+       
+        box-sizing: border-box;
+        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+        border-radius: 21px;
+        
+        
     }
     .images {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding-left: 0px;
         padding-top: 50px;
         margin: 0;
         justify-content: center;
     }
-    
+    #men {
+        margin-left: 260px;   
+    }
+    .brandImages{
+        
+        width: 50px;
+        
+       margin-left: -20px;
+        box-sizing: border-box;
+        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+        border-radius: 21px;
+    }
+    #versace{
+        margin-left: -170px;
+        
+    }
+    #louisVuitton{
+        margin-left: -110px;
+    }
+    #calvinKlein{
+        margin-left: -50px;
+    }
+    #gucci{
+        margin-left: 10px;
+    }
+    #burberry{
+        margin-left: 10px;
+    }
+    #tomFord{
+        margin-left: 10px;
+    }
+
 }
