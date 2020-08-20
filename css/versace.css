@@ -1,17 +1,18 @@
-
-#img{
+#img {
     width: 50px;
     height: 50px;
 }
+
 h1 {
     color: #FA0B53;
     font-family: 'Pacifico', cursive;
     text-align: center;
-    font-size: 50px; 
+    font-size: 50px;
     margin: auto;
     margin-top: 10px;
-    
+
 }
+
 h5 {
     color: #FA0B53;
     font-family: 'Comfortaa', cursive;
@@ -19,14 +20,16 @@ h5 {
     font-size: 25;
     margin: auto;
     padding-bottom: 20px;
-    
+
 }
+
 a {
     text-decoration: none;
-    color:#FA0B53;
+    color: #FA0B53;
     font-family: 'Comfortaa', cursive;
     font-size: 14px;
- }
+}
+
 #logoIcon {
     width: 120px;
     float: center;
@@ -35,7 +38,7 @@ a {
     left: 35%;
     right: 42.42%;
     top: 3%;
-    
+
 }
 
 #versace-container {
@@ -53,7 +56,7 @@ a {
     width: 200px;
     height: 220px;
     border-radius: 15px;
-    border-color:#FA0B53;
+    border-color: #FA0B53;
     transition: opacity .5s;
     border-style: solid;
 }
@@ -62,23 +65,28 @@ a {
     cursor: pointer;
     opacity: .8;
 }
-p{
+
+p {
     font-family: 'Comfortaa', cursive;
     text-align: center;
     font-size: 25;
 }
-h6{
+
+h6 {
     color: #FA0B53;
     font-family: 'Comfortaa', cursive;
     text-align: center;
     font-size: 10px;
     flex-wrap: wrap;
     align-self: auto;
-    
+
 }
-#logoIcon{
-    
-    margin-left: -135px;
-    margin-top: -6px;
-    padding-right: 700px;
- }
+
+@media (max-width: 700px) {
+    #logoIcon {
+
+        margin-left: -135px;
+        margin-top: -6px;
+        padding-right: 700px;
+    }
+}
